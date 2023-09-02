@@ -11,7 +11,7 @@ import SwiftUI
 struct EmotionRecognitionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomePage()
         }
     }
 }

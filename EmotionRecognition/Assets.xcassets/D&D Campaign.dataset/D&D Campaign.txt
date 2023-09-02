@@ -1,0 +1,109 @@
+﻿This is the world of Fearune, a land of heroic deeds and vile machinations where the ground itself is sewn with magic. As chance would have it, on one cold Autumn day, the five of you find yourselves seated at a wooden long table beside a glowing hearth, deep within the heart of the city Neverwinter. Each of you received a summons not too long ago from a wealthy merchant by the name of Vander Pyke, informing you of a potential contract. The tavern you have found yourself in is dimly lit, the only source of light coming from the hearth at your back, casting elongated shadows across the table in front of you. A few other patrons are huddled in the establishment, far too engrossed in their drinks to notice the five of you waiting expectantly. Suddenly the door is thrown open and a short bespectacled man with a bald head comes striding through the door. Initially, he appears unassuming. But there is some sinister hint to the way his black pin prick eyes take in the room. He takes a seat in front of the five of you. “Apologies for the late arrival, there were urgent matters that needed attending to.”
+Vander Pyke is a reputable merchant supplying the city of Neverwinter with food. However, one of his primary suppliers, a middle of the road town by the name of Ember Hearth has reported a blight covering their crops. “Three years ago, one it was a few husks of corn and nothing more, I thought very little of it. The next year, when boils started appearing, it had me worried. But my contact in the town, a farmer by the name of Hans Rubert, told me they had cut the infected crops. Then the very next Fall it was back again and even more vile, apparently the ground itself started leaking… liquids. At that point I considered sending in special operators to torch the crop, but Mr. Rubert convinced me he had the situation under control. Apparently, as I learned two weeks ago, he did not. The blight… seems to have spread to the animals. One of the bulls went on a rampage. Killed a farmer and maimed another, before it went down. At this point, I must suspect foul play. If the five of you could head to Ember Hearth and do something about this damned blight, I would be indebted to you.”
+
+
+
+
+You exit the tavern and find a small carriage parked outside third to two silver horses. The carriage is laden with food, water and various traveling supplies. 
+
+
+You set out along the cobbled streets of Neverwinter, as snow falls all around you. Soon, you are beyond the city gates and descending the hill upon which the city sits, and out into the wild beyond. 
+
+
+[ask them what they want to do while traveling]
+It has now been six days since you set out from Neverwinter. You are passing through a dense forest of pines, forming a wall on either side of the decreasing decrepit road. The sound of your horses hooves seems to be the only sound for miles. A red hawk circles silently above you, it has been following you for miles. [perception check] (on success, you notice a rustling in the leaves to your right, a shadow slipping through cracks in the branches). If the players continue on without investigating. You hear a sudden twang from the first, a black arrow archers from the tree line, headed in the directing of your horse. (goblin makes bow attack)
+[goblin attack]
+On the seventh day of your journey you find the roads beginning to slant upward. You past through forests of glistening pines lined with icicles, and crest a hill in front of you flat grass land stretches for miles on end, with one significant exception. Directly in front of you, capped with silver snow, sits the volcano Eberron casting a shadow across the grasslands. And before the volcano, like an ant hill, sits the town of Ember Hearth and the farmlands beyond. You approach slowly. The sun is already setting by the time you reach the village, eclipsed by the hulking volcano Eberron. The town seems active enough, a few wagons move down the street, most of them seem to be hauling sickles and torches. 
+Houses are placed sparsely in Ember Hearth, gradually growing in concentration the closer you get to the town hall, once an ancient fortification built by some bygone militia, now refurbished and stripped of much of its former ferocity. The town hall is built of long pine logs with a somewhat out of place steel door at the front. Beside the town hall is the inn, a slightly smaller three story rectangular building made of dark wooden planks. A fuzzy orange light emanates from the open window. A quarter of a mile or so away the buildings have disappeared to give way to miles of open farmland. Beside the farmland are three thatched huts with wagons in front of them. To the right of these huts is a large pasture attached to a barn. There are no farm animals in sight. To the south, slightly beyond the edge of the town, sits a solitary stone building. It’s small, likely no more than a single room. Above the entryway sits a carved marble figure, whose description you cannot ascertain from such a distance. 
+
+
+Locations:
+inn
+Crypt
+Town Hall
+Farm Houses
+Wood witch’s house
+Barn
+
+
+People:
+        Hans Rupert -- head farmer
+        Wood witch 
+        Henry -- maimed farmhand 
+        Mayor Sam
+        Arthur Burk -- Huntsman 
+        Lucy Grey -- the sheriff 
+        Jimmothy -- inn keep. 
+
+
+        The interior of the inn is warm and hospitable. There are a dozen or so circular wooden tables, 2/3rds of which are occupied. Beyond them is a brick counter. You see the top of someone’s head peeking above the countertop. In one of the central tables, sits a party of three: two elves and a half orc. The half orc carries a greatsword and wears some sort of badge on her shirt. In the corner of the room, illuminated only vaguely by the red light of his pipe, sits a figure cloaked in green.
+        Lucy Grey: Goblins increasing in numbers, raiding wagons, thinks the town is cursed and should be torched and abandoned. Blight is beyond mortal creation. Strong fighter, very brave, but highly superstitious. 
+        Arthur Burk: thinks the goblins should be slaughtered, and that they are causing the blight with some strange poison, and wants to rally the townspeople and go into the forest to slaughter them. His solution to most problems is to just kill them.
+        Mayor Sam: loves his town and wants to save it, but is not willing to sacrifice his life in the process. He thinks the blight is a much bigger concern than the goblins. He refuses to allow the farmers to torch the whole field, out of a belief that some of it could be salvaged. He will help the players when they explain that they were sent to help, but until then he will distrust them as strangers. Has become paranoid and believes Hans is poisoning the crops to sabotage him. 
+        Hans Rupert: Claims the blight is foreign disease brought from some other continent on a trading ship, nothing supernatural about it. Tries to convince the player’s that the best solution would be to burn it out completely and scorch the soil to stop the spores from reinfesting. In reality, Rupert is the leader of a sinister cult worshiping the lich corpse beneath the crypt. He knows that the lich is responsible and seeks to deter efforts into stopping what he believes is his master’s plan. He doesn’t care about whether the blight or the goblins are destroyed or not, only that his cult is allowed to remain secret along with their master. As such, he will actively and purposefully aid the players in stopping the goblins and will not deter them from trying whatever method they see fit into stopping the blight. He only wishes to convince them that its source is not supernatural. 
+        Henry: a farmhand maimed by a maddened bull; he walks with makeshift wooden crutches. He wants to help fight the goblin threat, but finds it impossible in his condition. He is obsessed with finding a “cure” for the blight. In his shed he has stacks and stacks of magical herbs, elixirs, and gemstones, along with a pile of blighted seeds. He has a generally cheerful demeanor, but hiding a deeper resentment for his status.
+
+
+        Farm description. You approach the farming cottages on the outskirts of the town. In front of the buildings, on the main paved road, sit three wagons laden with sickles, unlit torches, and barrels of oil. You see two figures beside the wagons, pushing them off the road. 
+        The first figure is middle aged with orange hair and a beard and green eyes. He is dressed in tan farmer’s clothes. Beside him is a young boy with brown hair. He is holding on to the wagon for support. In the road a few feet back you see a pair of makeshift wooden crutches. Although obscured by his clothes, you can make out that his legs are unnaturally twisted. 
+        [why are you pushing these wagons] “That fool Mayor Sam’s ordered it. He says the fields aren’t to be torched.” [scoffs] “I asked him when’s the last time he’s seen the state of the fields. Didn’t get a reply.” He huffs and shoves the wagon off the road. “I thought it was no brainer, didn’t think that mayor would have the gaul to do something as stupid as this. Guess that was my mistake. Now I’ve got three wagons full of torches, sickles, and oil and nothing to do with them.” 
+        You pass the farm houses and trudge up a low hill, Henry hopping up behind you. At the top, you see miles of wheat fields sprawling out before you. Henry says, “that’s the blight down there. Its bad at the start. But the deeper you go, the worse it gets.”
+        As you approach, you are hit by a wave of rancid air. The ground feels spongy beneath your feet, as if swollen with liquid. The stalks of wheat grown black and rotten, ensnared by barbed tendrils of a strange black vine. [perception check] There is no wind, but you notice some of the stalks of corn shaking a few hundred feet in the distance. You make your way through the sickly black maze of wheat. As you approach the vines grow larger and more numerous. Some have completely devoured their stalks and now sprout into red flowers. The air around you is filled with a strange red dust. [con save] on failure take 1d4 poison damage. The rustling gets closer and closer as you approach until it is just a few feet from you. The rustling stops. Then, slowly the whiskered head of a rabbit pokes out of the pestilent stalks. It takes one look at you, pauses for a few seconds, and then scampers back into the wheat. There is silence for a few seconds. Then comes a loud ear wrenching shrek followed by hissing sound and then silence. 
+        You make your way through the wheat and on the ground in front of you is a large yellow slime enveloping the lifeless rabbit. There are two more slimes further back moving towards the dead carcass. 
+        The last slime bursts apart in a shower of rancid liquid. On the ground beyond where the slime once loomed, you catch sight of something red glowing behind a matted clump of black vines. 
+        Pushing through the vines, you see a plinth like structure composed of a mass of red vines twisting together before sprouting into a large red flower. From this central location, five tendrils of these red vines emanate, each snaking its way through the farmland in a different direction. Their paths are lost immediately in the dense haze of the wheat stalks, save for one which you can see clearly snaking its way up a hill and into the forest.
+
+
+        You approach the dilapidated stone building. Inside is a hollow chamber with three stone sarcophagi arranged within. Resting above the building, carved of marble, is a figure wearing a white robe. His form is deathly gaunt, bones protruding under flesh, and where his face should be, there is simply a gaping hole in the stone.
+
+
+        The shadows of the pine forest seem accentuated beyond the scope of nature, looming down around you as spindly giants. There is very little foliage in the forest.
+        
+        You approach the surface of the water. The lake is deep murky blue, almost impossible to see into the depths of the water. You see a fish flopping at the water’s edge. 
+
+
+        You approach the vast slopes of the volcano. You see the remnants of the last eruption strewn all around you, ranging from small white rocks no larger than your fist to boulders that tower over the largest buildings in the village.
+
+
+        Emerging from the lake is a behemoth of raging tendrils. The creature has eight greenish arms and the head of a colossal squid from which droops a beard-like mat of translucent blue flagella.
+
+
+
+
+
+
+
+
+
+
+3 goblins 1 bloodhawk (ambush at the start)
+1 shadows 2 skeleton  (blight)
+1 giant octopus (lake) 
+
+
+1 goblin boss 3 goblins (first goblin camp encounter)
+2 goblin mutants and 1l
+1 Goblin brute (end of goblin camp) 
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+
+
+Larry (bracken) NA
+
+
+Giorgio (Ben Horax) 18
+Dad (Ducky) 16
+Mom (ruix)  10
+Julie (taslin) 10
