@@ -17,7 +17,6 @@ struct Level3: View {
     
     var body: some View {
         VStack{
-            Image("D&D Campaign")
             ProgressView(value: Double(score) / maxScore)
                 .tint(.green)
                 .scaleEffect(x: 1, y: 2)
