@@ -65,12 +65,11 @@ struct Level2: View {
             if i == targetEmotionIndex
             {
                 score += 1
-                emotionChoices = EmotionList.getEmotionChoices()
-                targetEmotionIndex = Int.random(in: 0..<4)
             }
+            emotionChoices = EmotionList.getEmotionChoices()
+            targetEmotionIndex = Int.random(in: 0..<4)
         }
-        let randomImageIndex = Int.random(in: 0..<EmotionList.numImagesPerEmotion[emotionChoices[i]]!)
-        let imageId = emotionChoices[i].lowercased() + "_" + String(randomImageIndex)
+        let imageId = EmotionList.getImageFile(emotion: emotionChoices[i])
         
         return Button(action: buttonClicked)
         {

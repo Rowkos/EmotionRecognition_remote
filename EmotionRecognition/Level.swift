@@ -22,6 +22,7 @@ struct IncorrectView: View
     }
 }
 
+
 struct Level: View {
     let emotions = EmotionList.emotionList
     @State var emotionChoices = EmotionList.getEmotionChoices()
@@ -34,11 +35,13 @@ struct Level: View {
     @State var showIncorrect = false
     var popoverAnchor = Rectangle()
     var max_score = 20.0
+    @State var showCompletionScreen = false
+    @State var questionsAnswered = 0
+    
     
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        var randomImageIndex = Int.random(in: 0..<EmotionList.numImagesPerEmotion[emotionChoices[targetEmotionIndex]]!)
-        if showCorrect == false && showIncorrect == false
+        if showCorrect == false && showIncorrect == false && showCompletionScreen == false
         {
             ZStack {
                 Color(.systemGray4).ignoresSafeArea()
@@ -49,7 +52,7 @@ struct Level: View {
                     
                     Text(String(Int(score)) + "/" + String(Int(max_score)))
                     ZStack (alignment: .topTrailing){
-                        Image(emotionChoices[targetEmotionIndex].lowercased() + "_" + String(randomImageIndex))
+                        Image(EmotionList.getImageFile(emotion: emotionChoices[targetEmotionIndex]))
                             .resizable()
                             .frame(width: 380.0, height: 380.0)
                             .cornerRadius(20.0)
@@ -113,28 +116,72 @@ struct Level: View {
         if showIncorrect
         {
             ZStack (alignment: .topTrailing){
-                IncorrectView().transition(.slide)
+                VStack{
+                    IncorrectView()
+                    Text("The correct answer was: ")
+                        .font(.title)
+                    Text(emotionChoices[targetEmotionIndex])
+                        .font(.largeTitle)
+                }
                 Button("Done")
                 {
                     showIncorrect = false
-                }.transition(.opacity)
-                    .padding(20)
+                }.padding(20).transition(.opacity)
+            }.transition(.slide)
+        }
+        if showCompletionScreen && showCorrect == false
+        {
+            ZStack{
+                Color(.systemGray4).ignoresSafeArea()
+                VStack{
+                    Text("Well Done!").font(.largeTitle).multilineTextAlignment(.center)
+                    Text("You completed level 1 with an accuracy of: ").font(.title).multilineTextAlignment(.center)
+                    Text(String(Int(score)) + "/" + String(questionsAnswered)).font(.largeTitle).foregroundColor(Color.orange).scaleEffect(1.2).padding(20)
+                    HStack{
+                        Image(systemName: "star.fill")
+                        if score / Double(questionsAnswered) > 0.8
+                        {
+                            Image(systemName: "star.fill")
+                        }
+                        else
+                        {
+                            Image(systemName: "star")
+                        }
+                        if score / Double(questionsAnswered) > 0.9
+                        {
+                            Image(systemName: "star.fill")
+                        }
+                        else
+                        {
+                            Image(systemName: "star")
+                        }
+                    }.scaleEffect(1.5).foregroundColor(.orange)
+                    Image("MainMenuElephant").resizable().rotationEffect(Angle(degrees: -90.0)).padding(.horizontal, 50).scaledToFit()
+                }.transition(.slide)
             }
         }
     }
     func answerButton(i: Int) -> some View{
         func buttonClicked()
         {
+            
             if i == targetEmotionIndex
             {
+                showCorrect = true
                 score += 1
-                emotionChoices = EmotionList.getEmotionChoices()
-                targetEmotionIndex = Int.random(in: 0..<4)
+            }
+            else
+            {
+                showIncorrect = true
             }
             if score == max_score
             {
                 UserDefaults.standard.set(1, forKey: DefaultsKeys.keys[0])
+                showCompletionScreen = true
             }
+            emotionChoices = EmotionList.getEmotionChoices()
+            targetEmotionIndex = Int.random(in: 0..<4)
+            questionsAnswered += 1
         }
         return Button(action: buttonClicked)
         {
