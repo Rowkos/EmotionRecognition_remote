@@ -9,16 +9,50 @@ import Foundation
 
 struct Scenarios
 {
-    static func getScenario(file: String) -> String{
-        var text = "ERROR, NO DATA READ"
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+    static func getScenario(file: String, index: Int) -> String{
+        let path = Bundle.main.resourcePath! + "/EmotionScenariosGPT4/" + file.lowercased()
+         
+        var returnString = ""
+        do {
+            let data = try String(contentsOfFile: path)
+            var rows = data.components(separatedBy: "\n")
+            let adjustedIndex = Int(Double(rows.count) * (Double(index) / 100.0))
+            rows.removeFirst()
+            var subString = rows[index]
+            let range = subString.index(subString.startIndex, offsetBy: 3)..<subString.index(subString.endIndex, offsetBy: -2)
+            subString = String(subString[range])
+            let splitString = subString.components(separatedBy: "\",")[0]
+            let finalRange = splitString.index(splitString.startIndex, offsetBy: 1)..<splitString.index(splitString.endIndex, offsetBy: -1)
+            let finalSplitString = splitString[finalRange]
+            returnString = String(finalSplitString)
             
-            let fileURL = dir.appendingPathComponent(file)
-            do {
-                text = try String(contentsOf: fileURL, encoding: .utf8)
-            }
-            catch {/* error handling here */}
+        } catch {
+            print(error)
+            return returnString
         }
-        return text
+        print(returnString)
+        return returnString
+    }
+    
+    static func getExplanation(file: String, index: Int) -> String{
+        let path = Bundle.main.resourcePath! + "/EmotionScenariosGPT4/" + file.lowercased()
+
+        var returnString = ""
+        do {
+            var data = try String(contentsOfFile: path)
+            var rows = data.components(separatedBy: "\n")
+            rows.removeFirst()
+            var subString = rows[index]
+            let range = subString.index(subString.startIndex, offsetBy: 3)..<subString.index(subString.endIndex, offsetBy: -2)
+            subString = String(subString[range])
+            var splitString = subString.components(separatedBy: "\",\"")
+            returnString = splitString[1]
+            
+        } catch {
+            print(error)
+            return returnString
+        }
+        print(returnString)
+        return returnString
     }
 }

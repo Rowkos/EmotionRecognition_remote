@@ -41,10 +41,25 @@ struct EmotionList
         }
     }
     
+    static func getImageFile(emotion: String, index: Int) -> String
+    {
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath! + "/" + emotion.lowercased() + "_results"
+        var item = "FAILURE TO LOAD"
+
+        do {
+            let items = try fm.contentsOfDirectory(atPath: path)
+            let adjustedIndex = Int(Double(items.count) * (Double(index) / 100.0))
+            item = String(items[adjustedIndex].dropLast(4))
+        } catch {
+            // failed to read directory – bad permissions, perhaps?
+        }
+        return item
+    }
     static func getImageFile(emotion: String) -> String
     {
         let fm = FileManager.default
-        var path = Bundle.main.resourcePath! + "/" + emotion.lowercased() + "_results"
+        let path = Bundle.main.resourcePath! + "/" + emotion.lowercased() + "_results"
         var items = "FAILURE TO LOAD"
 
         do {
@@ -54,6 +69,20 @@ struct EmotionList
             // failed to read directory – bad permissions, perhaps?
         }
         return items
+    }
+    
+    static func getSizeOfEmotion(emotion: String) -> Int
+    {
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath! + "/" + emotion.lowercased() + "_results"
+        var items: [String] = ["FAILURE TO LOAD"]
+
+        do {
+            items = try fm.contentsOfDirectory(atPath: path)
+        } catch {
+            // failed to read directory – bad permissions, perhaps?
+        }
+        return items.count
     }
 }
 

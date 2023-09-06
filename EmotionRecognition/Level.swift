@@ -38,7 +38,6 @@ struct Level: View {
     @State var showCompletionScreen = false
     @State var questionsAnswered = 0
     
-    
     @Environment(\.dismiss) var dismiss
     var body: some View {
         if showCorrect == false && showIncorrect == false && showCompletionScreen == false
@@ -105,10 +104,13 @@ struct Level: View {
         if showCorrect
         {
             ZStack (alignment: .topTrailing){
-                CorrectView().transition(.slide)
+                Image("CorrectPopup").resizable().transition(.slide)
                 Button("Done")
                 {
                     showCorrect = false
+                    emotionChoices = EmotionList.getEmotionChoices()
+                    targetEmotionIndex = Int.random(in: 0..<4)
+                    questionsAnswered += 1
                 }.transition(.opacity)
                     .padding(20)
             }
@@ -117,17 +119,23 @@ struct Level: View {
         {
             ZStack (alignment: .topTrailing){
                 VStack{
-                    IncorrectView()
+                    Spacer()
+                    Image("IncorrectPopup").resizable().scaledToFit()
+                    Spacer()
                     Text("The correct answer was: ")
                         .font(.title)
                     Text(emotionChoices[targetEmotionIndex])
                         .font(.largeTitle)
-                }
+                    Spacer()
+                }.transition(.slide)
                 Button("Done")
                 {
                     showIncorrect = false
+                    emotionChoices = EmotionList.getEmotionChoices()
+                    targetEmotionIndex = Int.random(in: 0..<4)
+                    questionsAnswered += 1
                 }.padding(20).transition(.opacity)
-            }.transition(.slide)
+            }
         }
         if showCompletionScreen && showCorrect == false
         {
@@ -177,11 +185,16 @@ struct Level: View {
             if score == max_score
             {
                 UserDefaults.standard.set(1, forKey: DefaultsKeys.keys[0])
+                if score / Double(questionsAnswered) > 0.8
+                {
+                    UserDefaults.standard.set(2, forKey: DefaultsKeys.keys[0])
+                }
+                if score / Double(questionsAnswered) > 0.9
+                {
+                    UserDefaults.standard.set(3, forKey: DefaultsKeys.keys[0])
+                }
                 showCompletionScreen = true
             }
-            emotionChoices = EmotionList.getEmotionChoices()
-            targetEmotionIndex = Int.random(in: 0..<4)
-            questionsAnswered += 1
         }
         return Button(action: buttonClicked)
         {
