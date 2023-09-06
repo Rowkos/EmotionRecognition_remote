@@ -30,7 +30,6 @@ struct Scenarios
             print(error)
             return returnString
         }
-        print(returnString)
         return returnString
     }
     
@@ -52,7 +51,6 @@ struct Scenarios
             print(error)
             return returnString
         }
-        print(returnString)
         return returnString
     }
 }

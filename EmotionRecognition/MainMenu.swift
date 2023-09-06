@@ -16,6 +16,7 @@ struct MainMenu: View {
         if showLevelSelect == false
         {
             ZStack{
+                Color(.systemGray4).ignoresSafeArea()
                 VStack{
                     // move above elephant's head
                     HStack
@@ -57,28 +58,6 @@ struct MainMenu: View {
                             }.padding(20)
                         }
                     }.foregroundColor(.black).shadow(radius: 10)
-                    
-                    HStack
-                    {
-                        
-                        Button(action: goToHome)
-                        {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 10).frame(width: 100, height: 100)
-                                    .foregroundColor(.gray)
-                                Text("Home").foregroundColor(.white)
-                            }
-                            
-                        }.shadow(radius: 10).padding(20)
-                        Button(action: goToProfile)
-                        {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 10).frame(width: 100, height: 100).foregroundColor(.gray)
-                                Text("Profile").foregroundColor(.white)
-                            }
-                            
-                        }.shadow(radius: 10).padding(20)
-                    }
                 }.blur(radius: blurValue)
                 if showInfoPopup
                 {

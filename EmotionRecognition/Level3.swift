@@ -25,53 +25,56 @@ struct Level3: View {
     var body: some View {
         if showCorrect == false && showIncorrect == false && showCompletionScreen == false
         {
-            VStack{
-                ProgressView(value: Double(score) / maxScore)
-                    .tint(.green)
-                    .scaleEffect(x: 1, y: 2)
-                    .padding([.top, .leading, .trailing], 20)
-                
-                Text(String(Int(score)) + "/" + String(Int(maxScore)))
-                ZStack(alignment: .topTrailing){
-                    ScrollView
-                    {
-                        Text(Scenarios.getScenario(file: emotionChoices[targetEmotionIndex], index: scenarioIndex)).font(.title).multilineTextAlignment(.leading).padding(.horizontal, 30)
-                    }
-                    Button(action: promptQuestion)
-                    {
-                        ZStack{
-                            Ellipse()
-                                .frame(width: 47, height: 47)
-                                .foregroundColor(.black)
-                            Ellipse()
-                                .frame(width: 43, height: 43)
-                                .foregroundColor(.gray)
-                            Text("?")
-                                .foregroundColor(.black)
-                                .scaleEffect(2)
-                        }
-                    }.padding(20).alert("Choose the picture the best represents the scenario", isPresented: $showInstructions)
-                    {
-                        Button("OK")
+            ZStack{
+                Color(.systemGray4).ignoresSafeArea()
+                VStack{
+                    ProgressView(value: Double(score) / maxScore)
+                        .tint(.green)
+                        .scaleEffect(x: 1, y: 2)
+                        .padding([.top, .leading, .trailing], 20)
+                    
+                    Text(String(Int(score)) + "/" + String(Int(maxScore)))
+                    ZStack(alignment: .topTrailing){
+                        ScrollView
                         {
-                            showInstructions.toggle()
+                            Text(Scenarios.getScenario(file: emotionChoices[targetEmotionIndex], index: scenarioIndex)).font(.title).multilineTextAlignment(.leading).padding(.horizontal, 30)
+                        }
+                        Button(action: promptQuestion)
+                        {
+                            ZStack{
+                                Ellipse()
+                                    .frame(width: 47, height: 47)
+                                    .foregroundColor(.black)
+                                Ellipse()
+                                    .frame(width: 43, height: 43)
+                                    .foregroundColor(.gray)
+                                Text("?")
+                                    .foregroundColor(.black)
+                                    .scaleEffect(2)
+                            }
+                        }.padding(20).alert("Choose the picture the best represents the scenario", isPresented: $showInstructions)
+                        {
+                            Button("OK")
+                            {
+                                showInstructions.toggle()
+                            }
                         }
                     }
+                    HStack
+                    {
+                        answerButton(i: 0)
+                        Spacer()
+                        answerButton(i: 1)
+                    }
+                    .padding(.all, 20.0)
+                    HStack
+                    {
+                        answerButton(i: 2)
+                        Spacer()
+                        answerButton(i: 3)
+                    }
+                    .padding(.all, 20.0)
                 }
-                HStack
-                {
-                    answerButton(i: 0)
-                    Spacer()
-                    answerButton(i: 1)
-                }
-                .padding(.all, 20.0)
-                HStack
-                {
-                    answerButton(i: 2)
-                    Spacer()
-                    answerButton(i: 3)
-                }
-                .padding(.all, 20.0)
             }
         }
         if showCorrect

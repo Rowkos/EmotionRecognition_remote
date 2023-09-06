@@ -19,6 +19,7 @@ struct DefaultsKeys {
 
 struct LevelSelect: View {
     @State var showLevel = 0
+    @State var incompleteLevelAlert = false
     let defaults = UserDefaults.standard
     var body: some View {
         if showLevel != 0{
@@ -51,7 +52,7 @@ struct LevelSelect: View {
                 Color(.systemGray4).ignoresSafeArea()
                 ScrollView{
                     ZStack{
-                        Text("Click on a level to begin. Once you have gotten an accuracy of 20/30 or better, you will got your first star and can move on to the next level.").font(.title2).multilineTextAlignment(.center).padding(.horizontal, 60).padding(.vertical, 20)
+                        Text("Click on a level to begin. Once you have gotten 20 questions right, you will got your first star and can move on to the next level.").font(.title2).multilineTextAlignment(.center).padding(.horizontal, 60).padding(.vertical, 20)
                         Image("LevelConnectorCropped").resizable().scaleEffect(1.3).frame(width: 160, height: 160).position(x: screenWidth / 2, y:screenHeight / 2 - connectorFactor - moveFactor)
                         Image("LevelConnectorMirrored").resizable().scaleEffect(1.3).frame(width: 160, height: 160).position(x: screenWidth / 2, y: screenHeight / 2 - connectorFactor)
                         Image("LevelConnectorCropped").resizable().scaleEffect(1.3).frame(width: 160, height: 160).position(x: screenWidth / 2, y:screenHeight / 2 + connectorFactor)
@@ -92,7 +93,24 @@ struct LevelSelect: View {
     func levelIcon(i: Int) -> some View{
         func openLevel1()
         {
-            showLevel = i
+            if i != 1
+            {
+                let num = defaults.integer(
+                    forKey: DefaultsKeys.keys[i - 2]
+                )
+                if num > 0
+                {
+                    showLevel = i
+                }
+                else
+                {
+                    incompleteLevelAlert = true
+                }
+            }
+            else
+            {
+                showLevel = i
+            }
         }
         return VStack{
             ZStack
@@ -109,7 +127,9 @@ struct LevelSelect: View {
                     }
                     
                 }
-                .foregroundColor(.white)
+                .foregroundColor(.white) .alert("You need to complete the previous level before moving on", isPresented: $incompleteLevelAlert) {
+                    Button("OK", role: .cancel) { }
+                }
                 
             }
             HStack (spacing: 0){
