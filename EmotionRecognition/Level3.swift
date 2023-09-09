@@ -34,11 +34,11 @@ struct Level3: View {
                         .padding([.top, .leading, .trailing], 20)
                     
                     Text(String(Int(score)) + "/" + String(Int(maxScore)))
-                    ZStack(alignment: .topTrailing){
-                        ScrollView
-                        {
-                            Text(Scenarios.getScenario(file: emotionChoices[targetEmotionIndex], index: scenarioIndex)).font(.title).multilineTextAlignment(.leading).padding(.horizontal, 30)
-                        }
+                    ScrollView
+                    {
+                        Text(Scenarios.getScenario(file: emotionChoices[targetEmotionIndex], index: scenarioIndex)).font(.title).multilineTextAlignment(.leading).padding(.horizontal, 30)
+                    }
+                    ZStack{
                         Button(action: promptQuestion)
                         {
                             ZStack{
@@ -59,21 +59,24 @@ struct Level3: View {
                                 showInstructions.toggle()
                             }
                         }
+                        VStack{
+                            HStack
+                            {
+                                answerButton(i: 0)
+                                Spacer()
+                                answerButton(i: 1)
+                            }
+                            
+                            .padding(.all, 20.0)
+                            HStack
+                            {
+                                answerButton(i: 2)
+                                Spacer()
+                                answerButton(i: 3)
+                            }
+                            .padding(.all, 20.0)
+                        }
                     }
-                    HStack
-                    {
-                        answerButton(i: 0)
-                        Spacer()
-                        answerButton(i: 1)
-                    }
-                    .padding(.all, 20.0)
-                    HStack
-                    {
-                        answerButton(i: 2)
-                        Spacer()
-                        answerButton(i: 3)
-                    }
-                    .padding(.all, 20.0)
                 }
             }
         }
@@ -117,7 +120,7 @@ struct Level3: View {
                 Color(.systemGray4).ignoresSafeArea()
                 VStack{
                     Text("Well Done!").font(.largeTitle).multilineTextAlignment(.center)
-                    Text("You completed level 1 with an accuracy of: ").font(.title).multilineTextAlignment(.center)
+                    Text("You completed level 3 with an accuracy of: ").font(.title).multilineTextAlignment(.center)
                     Text(String(Int(score)) + "/" + String(questionsAnswered)).font(.largeTitle).foregroundColor(Color.orange).scaleEffect(1.2).padding(20)
                     HStack{
                         Image(systemName: "star.fill")

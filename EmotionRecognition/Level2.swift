@@ -13,7 +13,7 @@ struct Level2: View {
     @State var targetEmotionIndex = Int.random(in: 0..<4)
     @State var score = 0
     @State var questionsAnswered = 0
-    let maxScore = 20.0
+    let maxScore = 1.0
     @State var showInstructions = false
     @State var showCorrect = false
     @State var showIncorrect = false
@@ -105,7 +105,7 @@ struct Level2: View {
                 Color(.systemGray4).ignoresSafeArea()
                 VStack{
                     Text("Well Done!").font(.largeTitle).multilineTextAlignment(.center)
-                    Text("You completed level 1 with an accuracy of: ").font(.title).multilineTextAlignment(.center)
+                    Text("You completed level 2 with an accuracy of: ").font(.title).multilineTextAlignment(.center)
                     Text(String(Int(score)) + "/" + String(questionsAnswered)).font(.largeTitle).foregroundColor(Color.orange).scaleEffect(1.2).padding(20)
                     HStack{
                         Image(systemName: "star.fill")

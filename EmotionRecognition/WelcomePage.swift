@@ -22,7 +22,7 @@ struct WelcomePage: View {
                     Text("Welcome!")
                         .font(.largeTitle).scaleEffect(1.5)
                     Image("BranchIcon").resizable().frame(width: 251, height: 30).scaleEffect(1.5).padding(.horizontal, 20)
-                    Text("_____ is an app designed to help people develop and enhance their emotional processing, interpretation, and understanding")
+                    Text("Emote is an app designed to help people develop and enhance their emotional processing, interpretation, and understanding")
                         .font(.title)
                         .multilineTextAlignment(.center).padding(20).border(.black).padding(20)
                     Button(action: openMainMenu)

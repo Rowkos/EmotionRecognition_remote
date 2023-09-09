@@ -36,7 +36,7 @@
 		02CD995C2AA6B08000ECB487 /* angry_results in Resources */ = {isa = PBXBuildFile; fileRef = 02CD99502AA6B08000ECB487 /* angry_results */; };
 		02CD995D2AA6B08000ECB487 /* nervous_results in Resources */ = {isa = PBXBuildFile; fileRef = 02CD99512AA6B08000ECB487 /* nervous_results */; };
 		02CD995E2AA6B08000ECB487 /* confused_results in Resources */ = {isa = PBXBuildFile; fileRef = 02CD99522AA6B08000ECB487 /* confused_results */; };
-		02CD99602AA815E700ECB487 /* EmotionScenariosGPT4 in Resources */ = {isa = PBXBuildFile; fileRef = 02CD995F2AA815E700ECB487 /* EmotionScenariosGPT4 */; };
+		02CD99622AAD0C1500ECB487 /* EmotionScenariosGPT4 2 in Resources */ = {isa = PBXBuildFile; fileRef = 02CD99612AAD0C1500ECB487 /* EmotionScenariosGPT4 2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +89,7 @@
 		02CD99502AA6B08000ECB487 /* angry_results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = angry_results; sourceTree = "<group>"; };
 		02CD99512AA6B08000ECB487 /* nervous_results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nervous_results; sourceTree = "<group>"; };
 		02CD99522AA6B08000ECB487 /* confused_results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = confused_results; sourceTree = "<group>"; };
-		02CD995F2AA815E700ECB487 /* EmotionScenariosGPT4 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionScenariosGPT4; sourceTree = "<group>"; };
+		02CD99612AAD0C1500ECB487 /* EmotionScenariosGPT4 2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "EmotionScenariosGPT4 2"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 		02B10E1D2A7B0511007570B2 /* EmotionRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				02CD995F2AA815E700ECB487 /* EmotionScenariosGPT4 */,
+				02CD99612AAD0C1500ECB487 /* EmotionScenariosGPT4 2 */,
 				02CD99462AA6AA5500ECB487 /* ImageFiles */,
 				02B10E1E2A7B0511007570B2 /* EmotionRecognitionApp.swift */,
 				02B10E222A7B0512007570B2 /* Assets.xcassets */,
@@ -315,12 +315,12 @@
 				02CD995A2AA6B08000ECB487 /* sad_results in Resources */,
 				02B10E262A7B0512007570B2 /* Preview Assets.xcassets in Resources */,
 				02CD995B2AA6B08000ECB487 /* disappointed_results in Resources */,
+				02CD99622AAD0C1500ECB487 /* EmotionScenariosGPT4 2 in Resources */,
 				02CD995D2AA6B08000ECB487 /* nervous_results in Resources */,
 				02CD995E2AA6B08000ECB487 /* confused_results in Resources */,
 				02CD99582AA6B08000ECB487 /* surprised_results in Resources */,
 				02B10E232A7B0512007570B2 /* Assets.xcassets in Resources */,
 				02CD995C2AA6B08000ECB487 /* angry_results in Resources */,
-				02CD99602AA815E700ECB487 /* EmotionScenariosGPT4 in Resources */,
 				02CD99592AA6B08000ECB487 /* excited_results in Resources */,
 				02CD99532AA6B08000ECB487 /* scared_results in Resources */,
 				02CD99562AA6B08000ECB487 /* tired_results in Resources */,

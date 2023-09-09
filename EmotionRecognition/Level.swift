@@ -34,9 +34,10 @@ struct Level: View {
     @State var showCorrect = false
     @State var showIncorrect = false
     var popoverAnchor = Rectangle()
-    var max_score = 20.0
+    var max_score = 1.0
     @State var showCompletionScreen = false
     @State var questionsAnswered = 0
+    @State var emotionImage = ""
     
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -51,13 +52,16 @@ struct Level: View {
                     
                     Text(String(Int(score)) + "/" + String(Int(max_score)))
                     ZStack (alignment: .topTrailing){
-                        Image(EmotionList.getImageFile(emotion: emotionChoices[targetEmotionIndex]))
+                        Image(emotionImage)
                             .resizable()
                             .frame(width: 380.0, height: 380.0)
                             .cornerRadius(20.0)
                             .imageScale(.large)
                             .foregroundColor(.accentColor)
-                            .shadow(radius: 15)
+                            .shadow(radius: 15).onAppear()
+                        {
+                            emotionImage = EmotionList.getImageFile(emotion: emotionChoices[targetEmotionIndex])
+                        }
                         Button(action: promptQuestion)
                         {
                             ZStack{
@@ -147,7 +151,7 @@ struct Level: View {
                     Text(String(Int(score)) + "/" + String(questionsAnswered)).font(.largeTitle).foregroundColor(Color.orange).scaleEffect(1.2).padding(20)
                     HStack{
                         Image(systemName: "star.fill")
-                        if score / Double(questionsAnswered) > 0.8
+                        if Double(score) / Double(questionsAnswered) > 0.8
                         {
                             Image(systemName: "star.fill")
                         }
@@ -155,7 +159,7 @@ struct Level: View {
                         {
                             Image(systemName: "star")
                         }
-                        if score / Double(questionsAnswered) > 0.9
+                        if Double(score) / Double(questionsAnswered) > 0.9
                         {
                             Image(systemName: "star.fill")
                         }
