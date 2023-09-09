@@ -13,7 +13,7 @@ struct Level2: View {
     @State var targetEmotionIndex = Int.random(in: 0..<4)
     @State var score = 0
     @State var questionsAnswered = 0
-    let maxScore = 1.0
+    let maxScore = 20.0
     @State var showInstructions = false
     @State var showCorrect = false
     @State var showIncorrect = false

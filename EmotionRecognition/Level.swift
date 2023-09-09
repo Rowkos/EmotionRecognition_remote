@@ -34,7 +34,7 @@ struct Level: View {
     @State var showCorrect = false
     @State var showIncorrect = false
     var popoverAnchor = Rectangle()
-    var max_score = 1.0
+    var max_score = 20.0
     @State var showCompletionScreen = false
     @State var questionsAnswered = 0
     @State var emotionImage = ""
