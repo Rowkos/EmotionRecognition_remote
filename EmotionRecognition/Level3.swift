@@ -146,7 +146,6 @@ struct Level3: View {
     func answerButton(i: Int) -> some View{
         func buttonClicked()
         {
-            
             if i == targetEmotionIndex
             {
                 showCorrect = true
