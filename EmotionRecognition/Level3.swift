@@ -89,6 +89,7 @@ struct Level3: View {
                     showCorrect = false
                     emotionChoices = EmotionList.getEmotionChoices()
                     targetEmotionIndex = Int.random(in: 0..<4)
+                    scenarioIndex = Int.random(in: 0..<100)
                 }.transition(.opacity)
                     .padding(20)
             }
@@ -111,6 +112,7 @@ struct Level3: View {
                     showIncorrect = false
                     emotionChoices = EmotionList.getEmotionChoices()
                     targetEmotionIndex = Int.random(in: 0..<4)
+                    scenarioIndex = Int.random(in: 0..<100)
                 }.padding(20).transition(.opacity)
             }
         }
