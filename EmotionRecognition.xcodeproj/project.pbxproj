@@ -90,6 +90,7 @@
 		02CD99512AA6B08000ECB487 /* nervous_results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nervous_results; sourceTree = "<group>"; };
 		02CD99522AA6B08000ECB487 /* confused_results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = confused_results; sourceTree = "<group>"; };
 		02CD99612AAD0C1500ECB487 /* EmotionScenariosGPT4 2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "EmotionScenariosGPT4 2"; sourceTree = "<group>"; };
+		02D96C632AAD496B009A8578 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 		02B10E1D2A7B0511007570B2 /* EmotionRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				02D96C632AAD496B009A8578 /* Info.plist */,
 				02CD99612AAD0C1500ECB487 /* EmotionScenariosGPT4 2 */,
 				02CD99462AA6AA5500ECB487 /* ImageFiles */,
 				02B10E1E2A7B0511007570B2 /* EmotionRecognitionApp.swift */,
@@ -519,7 +521,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EmotionRecognition/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmotionRecognition/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = EmotionRecognition/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -548,7 +550,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EmotionRecognition/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmotionRecognition/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = EmotionRecognition/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
